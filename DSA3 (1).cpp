@@ -131,18 +131,18 @@ public:
  
 int main() 
 { 
-	int columns; 
-	int rows; 
-	cout<<"enter number of rows and cols"<<endl; 
-	cin>>rows>>columns; 
-	atype ob1(rows,columns); 
-	ob1.fillArray(); 
-	atype ob2=ob1; 
-	atype ob3(3,3); 
-	ob3.fillArray(); 
-	cout << ob1(1,1) << endl; cout<<ob3(1,1)<<endl; 
-	//checking bounds of array 
-	bool b= ob1!=ob3;              
-	cout<<b;     //(b=1 means ob1 = ob3) else (b=0 means ob1 != ob3)
+//	int columns; 
+//	int rows; 
+//	cout<<"enter number of rows and cols"<<endl; 
+//	cin>>rows>>columns; 
+//	atype ob1(rows,columns); 
+//	ob1.fillArray(); 
+//	atype ob2=ob1; 
+//	atype ob3(3,3); 
+//	ob3.fillArray(); 
+//	cout << ob1(1,1) << endl; cout<<ob3(1,1)<<endl; 
+//	//checking bounds of array 
+//	bool b= ob1!=ob3;              
+//	cout<<b;     //(b=1 means ob1 = ob3) else (b=0 means ob1 != ob3)
 	return 0; 
 } 
