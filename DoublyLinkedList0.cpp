@@ -5,12 +5,6 @@
 
 using namespace std;
 
-/*
-1-convert this into a template
-2-private the data variables (place setters/getters)
-3-seperate this into an implementation files
-
-*/
 class node{
 
 public:
