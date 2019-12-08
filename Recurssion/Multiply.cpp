@@ -17,5 +17,6 @@ int main(){
 	cin >> a;
 	cout << "Enter B: ";
 	cin >> b;
+	mul(0, a, b, 0);
 	return 0;
 }

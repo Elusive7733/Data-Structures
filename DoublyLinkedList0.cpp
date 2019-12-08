@@ -114,8 +114,8 @@ class list{
 		 }
 		 else{
 			 tail = tail->prev;
-			 tail->next=NULL;
 			 delete tail->next;
+			 tail->next=NULL;
 		 }
 	 }
 

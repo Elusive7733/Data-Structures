@@ -2,21 +2,26 @@
 #include <cmath>
 using namespace std;
 
-int armstrong(int sum, int num, int digits, int original){
+int armstrong(int sum, int num, int digits){
 	
-	if(digits == 0){
-	 	return sum; 
+	if(num%10 == num){
+	 	return (sum+pow(num%10, digits)); 
 	}
 	
-	armstrong(sum+pow(num%10, 3), num/10, --digits, original);
+	armstrong(sum+pow(num%10, digits), num/10, digits);
 }
 	
 int main(){
 	
-	int N, num;
+	int N, num, temp, nod = 0;
 	cout << "Enter number to check for armstrong number: ";
 	cin >> N;
-	num = armstrong(0, N, 3, N);
+	temp = N;
+	while(temp != 0){
+		nod++;
+		temp /=10;
+	}
+	num = armstrong(0, N, nod, nod);
 	if(num == N){
 		cout << N << " :is a armstrong number";
 	}
