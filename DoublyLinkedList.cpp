@@ -50,12 +50,11 @@ class list{
 		 copy_list(original);
 	}
 
-	 list& operator=(const list &original){
+	void operator=(const list &original){
 		if(this!=&original){
 			this->~list();
 			copy_list(original);
 		}
-
 	}
 
 	void increment_head(int data = 0){

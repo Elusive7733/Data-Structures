@@ -25,7 +25,7 @@ class Queue{
 		obj2.name = obj.name;
 		return obj2;
 	}
-	Max_heapify(int i) 
+	void Max_heapify(int i) 
 	{ 
     	int largest = i; 
     	int l = 2*i + 1; 
@@ -43,7 +43,7 @@ class Queue{
 		} 
 	}		
 	
-	Min_heapify(int i){
+	void Min_heapify(int i){
 		int smallest = i; 
     	int l = 2*i + 1; 
     	int r = 2*i + 2; 

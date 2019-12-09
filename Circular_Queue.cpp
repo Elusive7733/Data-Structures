@@ -20,19 +20,14 @@ class circular_queue{
 		if(front == rear){
 			return true;
 		}
-		else{
-			return false;
-		}
+		return false;
 	}
 	bool is_full(){
-		if(front == ((rear+1)%size)){
-			true;
+		if(front == (rear+1)%size){
+			return true;
 		}
-		else{
-			return false;
-		}
+		return false;
 	}
-	
 	void enqueue(int data = 0){
 		if(!is_full()){
 			storage[rear] = data;
@@ -71,20 +66,47 @@ class circular_queue{
 
 int main(){
 	circular_queue q(5);
-	q.enqueue(10);
-	q.enqueue(13);
-	q.dequeue();
-	q.dequeue();
-	q.enqueue(15);
-	q.dequeue();
-	q.enqueue(18);
-	q.enqueue(69);
-	q.enqueue(17);
-	q.dequeue();
-	q.enqueue(16);
-	q.enqueue(13);
-	q.enqueue(22);
-	q.display();
-//	cout << q.rear;
+	int num = 0, opt = 0;
+	while(opt != -1){
+		fflush(stdin);
+		system("cls");
+		cout << "1-Enqueue\n";
+		cout << "2-Dequeue\n";
+		cout << "3-Display\n";
+		cout << "4-Front\n";
+		cout << "5-Rear\n";
+		cout << "-1-Exit\n";
+		cin >> opt;
+		switch (opt){
+		case 1:
+			system("cls");
+			cout << "Enter number to enqueue: ";
+			cin >> num;
+			q.enqueue(num);
+			break;
+		case 2:
+			system("cls");
+			q.dequeue();
+			break;
+
+		case 3:
+			system("cls");
+			q.display();
+			break;
+		case 4:
+			cout << "Front: " << q.front << endl;
+			break;
+		case 5:
+			cout << "Rear: " << q.rear << endl;
+			break;
+		case -1:
+			break;
+		default:
+			system("cls");
+			cout << "Error-Invalid Option\n";
+			break;
+		}
+		system("pause");
+	}
 	return 0;
 }
