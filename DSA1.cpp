@@ -30,7 +30,7 @@ class DSA{
 		size = 0;
 	}
 	
-	//user inserting elements in 2d array 
+	//user inserting elements in 1d array 
 	void fillArray()
 	{	
 		for (int in=0;in<size;++in){	
