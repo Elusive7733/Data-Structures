@@ -24,7 +24,10 @@ imap randomize(){
 
 int main(){
     imap test;
+    int a;
     test = randomize();
     print_map(test);
+    cin >> a;
+    cout << test[a];
     return 0;
 }
